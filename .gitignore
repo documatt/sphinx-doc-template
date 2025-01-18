@@ -1,0 +1,22 @@
+# Python
+.venv
+venv/
+.nox
+__pycache__
+*.egg-info/
+
+# Sphinx
+build
+_build
+*.mo
+
+# Node
+node_modules
+
+# OS
+.DS_Store
+
+# editors
+.idea/
+!.vscode/*.sample
+.vscode/*
