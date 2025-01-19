@@ -1,0 +1,89 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, John Doe
+# This file is distributed under the same license as the My Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: My Documentation 0.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-20 13:34+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/sample.md:1
+msgid "Sample document"
+msgstr ""
+
+#: ../../source/sample.md:3
+msgid "This document demonstrates Markdown syntax. Professional books and tech documentation are plain text files with this easy markup language. Documatt is the tool for creating beautiful docs, manuals, or books for tech and novel writers."
+msgstr ""
+
+#: ../../source/sample.md:5
+msgid "Inline elements"
+msgstr ""
+
+#: ../../source/sample.md:7
+msgid "Paragraphs may contain *emphasized*, **strongly emphasized** words. Links to external webs like <https://documatt.com/blog/> are auto-recognized. Sometimes you need `monospaced text`. Useful are also {sup}`superscript` or {sub}`subscript`."
+msgstr ""
+
+#: ../../source/sample.md:9
+msgid "Images"
+msgstr ""
+
+#: ../../source/sample.md:11
+msgid "![](https://documatt.com/pages/blog/open-doodles-clumsy.svg)"
+msgstr ""
+
+#: ../../source/sample.md:13
+msgid "Lists"
+msgstr ""
+
+#: ../../source/sample.md:15
+msgid "Unordered lists usually use `*` as bullet symbol:"
+msgstr ""
+
+#: ../../source/sample.md:17
+msgid "A bullet list item"
+msgstr ""
+
+#: ../../source/sample.md:18
+msgid "Second item"
+msgstr ""
+
+#: ../../source/sample.md:19
+msgid "A sub item"
+msgstr ""
+
+#: ../../source/sample.md:21
+msgid "Ordered (enumerated) lists that are auto-numbered start with `#.`:"
+msgstr ""
+
+#: ../../source/sample.md:23
+msgid "one"
+msgstr ""
+
+#: ../../source/sample.md:24
+msgid "two"
+msgstr ""
+
+#: ../../source/sample.md:25
+msgid "three"
+msgstr ""
+
+#: ../../source/sample.md:27
+msgid "Showing code examples"
+msgstr ""
+
+#: ../../source/sample.md:29
+msgid "It's easy to show code parts with `inline literal` or literal block:"
+msgstr ""
+
+#: ../../source/sample.md:35
+msgid "Or, literal block with syntax highlighting:"
+msgstr ""
