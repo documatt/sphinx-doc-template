@@ -1,30 +1,34 @@
+# Copier Sphinx Documentation Template
+
 <div align="center">
 
-<a href="https://documatt.com/sphinx-docs-template">
-    <img src="https://github.com/documatt/sphinx-docs-template/blob/main/hero.png?raw=true" alt="Project hero image">
+<a href="https://documatt.com/copier-sphinx-docs-template">
+    <img src="https://github.com/documatt/copier-sphinx-docs-template/blob/main/hero.svg?raw=true" alt="Project hero image">
 </a>
 
-<h1>Sphinx Documentation Template</h1>
+<!-- overview -->
 
 <p><strong>An opinionated template for creating a modern Sphinx documentation project. Write in Markdown or reStructuredText, translate to multiple languages, boost with popular extensions, and enjoy automatic live reload on change.</strong></p>
 
 <p>Default blank Sphinx documentation project needs a lot of configuration, fine-tuning, trials, and fails before setting up everything for best results. This template results from the best practices and knowledge we gained by providing <a href="https://documatt.com/services">Documatt's technical writing services</a>.</p>
 
+<!-- .overview -->
+
 <p>
-    <a href="https://documatt.com/sphinx-docs-template">📚Documentation</a> ·
-    <a href="https://github.com/documatt/sphinx-docs-template">📟 Source code</a>
+    <a href="https://documatt.com/copier-sphinx-docs-template">📚Documentation</a> ·
+    <a href="https://github.com/documatt/copier-sphinx-docs-template">📟 Source code</a>
 </p>
 
 <p>
     <a href="https://github.com/copier-org/copier"><img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/copier-org/copier/master/img/badge/badge-grayscale-inverted-border-orange.json&labelColor=097cba&color=163B36" alt="Made with Copier badge"/></a>
-    <a href="https://github.com/documatt/sphinx-docs-template">
-        <img src="https://img.shields.io/github/stars/documatt/sphinx-docs-template?style=flat&logo=github&labelColor=097cba&color=163B36" alt="GitHub Repo stars badge">
+    <a href="https://github.com/documatt/copier-sphinx-docs-template">
+        <img src="https://img.shields.io/github/stars/documatt/copier-sphinx-docs-template?style=flat&logo=github&labelColor=097cba&color=163B36" alt="GitHub Repo stars badge">
     </a>
-    <a href="https://github.com/documatt/sphinx-docs-template/actions/workflows/test.yaml">
-        <img src="https://github.com/documatt/sphinx-docs-template/actions/workflows/test.yaml/badge.svg" alt="GitHub tests badge">
+    <a href="https://github.com/documatt/copier-sphinx-docs-template/actions/workflows/test.yaml">
+        <img src="https://github.com/documatt/copier-sphinx-docs-template/actions/workflows/test.yaml/badge.svg" alt="GitHub tests badge">
     </a>
     <img src="https://img.shields.io/badge/codestyle-Prettier-blue?labelColor=097cba&color=163B36" alt="Code style Prettier badge">
-    <a href="https://raw.githubusercontent.com/documatt/sphinx-docs-template/refs/heads/main/LICENSE">
+    <a href="https://raw.githubusercontent.com/documatt/copier-sphinx-docs-template/refs/heads/main/LICENSE">
         <img src="https://img.shields.io/badge/license-MIT-blue?labelColor=097cba&color=163B36" alt="MIT licence badge">
     </a>
 </p>
@@ -33,40 +37,46 @@
 
 <!-- Very short intro -->
 
-The repository is the Copier template. Copier is a command-line tool for creating projects from templates. It requires Python installed, but no knowledge of Python to use.
+The repository is the [Copier](https://copier.readthedocs.io) template. Copier is a command-line tool for creating projects from templates. It requires Python installed, but no knowledge of Python to use.
 
-To use the template, [install Copier](https://www.cookiecutter.io) first and then run the following command in your terminal:
+The recommended way to install Copier, Copier dependency `jinja2_time` is [uv](https://docs.astral.sh/uv/). The uv can even install Python for you, if you don't have it already.
+
+With uv installed, open the terminal and
 
 ```
-cookiecutter https://github.com/documatt/sphinx-docs-template
+uvx --with jinja2-time copier copy --trust https://github.com/documatt/copier-sphinx-docs-template my-new-docs
 ```
 
-Answer the series of questions, and you are ready to go. You have the skeleton of a completely functional Sphinx project in just a few moments.
+Answer the series of questions, and you are ready to go. You have the skeleton of a completely functional Sphinx project in `my-new-docs` folder in just a few moments.
 
-<!-- TODO: Screenshot / video -->
+<!-- TODO: Screenshot / video (animovaný png/webp?) -->
 <div align="center">
-<img alt="Quickstart" src="https://raw.githubusercontent.com/cruft/cruft/master/art/example.gif">
+    <img alt="Quickstart" src="https://raw.githubusercontent.com/cruft/cruft/master/art/example.gif">
 </div>
 
 ## Key Features
 
-The Sphinx documentation template creates supports:
+<!-- features -->
+
+The Sphinx documentation template key features:
 
 - 💯 Free & open-source.
 - ✍️ Write in Markdown or reStructuredText.
 - 🏗️ Comes with popular Sphinx extension for sitemaps, redirects, diagrams, etc.
 - 👅 Localization (i18n) support.
 - 😀 Sane configuration defaults and best practices.
-- 🎨 Format on save in VS Code.
+- 🎨 VS Code support: recommended extensions, settings and formatting.
 - ⚒️ Live reload on change.
 - 💾 Build to multiple outputs.
 - 👍 Works out-of-the-box.
 
-Learn more in [📚documentation](https://documatt.com/sphinx-docs-template).
+<!-- .features -->
+
+Learn more in [📚documentation](https://documatt.com/copier-sphinx-docs-template).
 
 ## Community and contributions
 
-Bug repors, feature requests, or all contributions are welcome at our [GitHub homepage](https://github.com/documatt/sphinx-docs-template/).
+Bug repors, feature requests, or all contributions are welcome at our [📟 GitHub homepage](https://github.com/documatt/copier-sphinx-docs-template/).
 
 Connect with other fellows who are building with Sphinx. Share knowledge, get help, and contribute to the open-source project. Check out our [Documatt Community](https://documatt.com/community) page to see featured material and upcoming events.
 
