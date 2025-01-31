@@ -2,26 +2,26 @@
 
 The generated template is regular [Sphinx project](https://www.sphinx-doc.org). You can configure it with `conf.py` and build the docs with `sphinx-build`, etc.
 
-Some tasks are just simple command, but other like preview or translate requires series of operations, including installing dependencies, copying files, etc. These tasks are scripted and centralized in a single file `noxfile.py`. This file is read by [Nox] tool. With running these complex scripts is just `nox -s <task>`, e.g. `nox -s build`.
+Some tasks are simple commands, but others, like preview or translate, require a series of operations, including installing dependencies, copying files, etc. These tasks are scripted and centralized in a single file `noxfile.py`. This file is read by the [Nox] tool. Running these complex scripts is just `nox -s <task>`, e.g. `nox -s build`.
 
-The following page is reference of configuration variables and tasks in `noxfile.py`.
+The following page is the reference of configuration variables and tasks in `noxfile.py`.
 
 [Nox]: https://nox.thea.codes/
 
 ```{topic} Install Nox globally
-If you have uv installed, run `uvx nox -s <task>`. But the `uv tool install nox` will install Nox globally and you can type only `nox -s <task>`.
+If you have uv installed, run `uvx nox -s <task>`. But the `uv tool install nox` will install Nox globally, and you can type only `nox -s <task>`.
 ```
 
 ## Configuration
 
-At the beginning of `noxfile.py` is a few configuration variables which influence most of bellow descibed tasks.
+At the beginning of `noxfile.py` are a few configuration variables that influence most of the below described tasks.
 
 ```{confval} INDIR
-Directory containing Markdown or reStructuredText document sources. By default `source`.
+Directory containing Markdown or reStructuredText document sources. By default, `source`.
 ```
 
 ```{confval} OUTDIR
-Base output directory for builds. By default `build`. But actual output will be in `<outdir>/<builder>/<language>/`, e.g. `build/html/en/`. See [](#outdir-structure).
+Base output directory for builds. By default, `build`. But the actual output will be in `<outdir>/<builder>/<language>/`, e.g. `build/html/en/`. See [](#outdir-structure).
 ```
 
 ```{confval} DEFAULT_SPHINX_OPTS
@@ -29,7 +29,7 @@ Default list of [`sphinx-build` arguments](https://www.sphinx-doc.org/en/master/
 ```
 
 ```{confval} BUILDERS
-List of Sphinx builders, i.e. formats, which will be builded by [](#build_all) task. E.g., `["html", "dirhtml"]`.
+List of Sphinx builders, i.e., formats, which will be built by [](#build_all) task. E.g., `["html", "dirhtml"]`.
 ```
 
 ```{confval} DEFAULT_BUILDER
@@ -37,7 +37,7 @@ Default builder for [](#nox-build) and [](#nox-preview) tasks.
 ```
 
 ```{confval} LANGUAGES
-List of all supported languages, if you want to translate your documentation.By default `[]` (an empty list). E.g., `['es', 'fr', 'de']`. See [list of Sphinx supported languages](https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-language).
+List of all supported languages if you want to translate your documentation.By default, `[]` (an empty list). E.g., `['es', 'fr', 'de']`. See [list of Sphinx supported languages](https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-language).
 ```
 
 ```{confval} DEFAULT_LANGUAGE
@@ -54,7 +54,7 @@ The generated `noxfile.py` offers the following tasks. You can invoke a task wit
 
 ### build
 
-Build single builder and language. If not specified in commandline argument, default builder and language.
+Build single builder and language. If not specified on the commandline, it uses default builder and language.
 
 Build to default builder and language:
 
@@ -68,23 +68,27 @@ Pass build builder/language on commandline:
 nox -s build -- dirhtml cs
 ```
 
+Will fail on error to prevent dead links and other problems.
+
 ### build_all
 
-Build all builders and langauges configured. Creates a `<builder>/<language>/` folder for each builder and language as described in [](#outdir-structure).
+Build all builders and languages configured. Creates a `<builder>/<language>/` folder for each builder and language as described in [](#outdir-structure).
 
 ```
 nox -s build_all
 ```
 
+Will fail on error to prevent dead links and other problems.
+
 ### redirect
 
-Create a HTML redirect from the root (`/`) to the default language (e.g., `/en/`).
+Create an HTML redirect from the root (`/`) to the default language (e.g., `/en/`).
 
 ```
 nox -s redirect
 ```
 
-For example, for html builder, and languages en, cs and he, the following folder and files are created (irrelevant files omitted):
+For example, for html builder and languages en, cs and he, the following folder and files are created (irrelevant files omitted):
 
 ```
 ├── build
@@ -103,15 +107,15 @@ For example, for html builder, and languages en, cs and he, the following folder
             └── ...
 ```
 
-When you deploy `html/` at e.g., `https://docs.example.com`, it will cause 404 error, because actual URLs to pages are `https://docs.example.com/he/settings.html`, etc.
+When you deploy `html/` at e.g., `https://docs.example.com`, it will cause a 404 error because the actual URLs to pages are `https://docs.example.com/he/settings.html`, etc.
 
-The task redirect will create the `index.html` at the builder root (`html/`) that redirect visitors to `en/index.html` (if en is default language).
+The task redirect will create the `index.html` at the builder root (`html/`) that redirects visitors to `en/index.html` (if en is the default language).
 
 ### clean
 
 Deletes {confval}`OUTDIR` directory.
 
-Usually used before other task. E.g., clean and build:
+Usually used before other tasks. E.g., clean and build:
 
 ```
 nox -s clean build
@@ -121,9 +125,9 @@ nox -s clean build
 
 ### preview
 
-Build and serve the docs with automatic reload on change. If not specified on commandline, uses default builder and language.
+Build and serve the docs with automatic reload on change. If not specified on the commandline, it uses default builder and language.
 
-Preview allows see immedially changes made to documents. It starts webserver (by default at http://localhost:8000) and watch for changes. If document is edited, preview will rebuild docs and refresh the webpage.
+Preview allows users to see changes made to documents immediately. It starts the web server (by default at http://localhost:8000) and watches for changes. If a document is edited, the preview rebuilds the documents and refreshes the webpage.
 
 Preview the default builder and language:
 
@@ -155,7 +159,7 @@ The preview is based on [sphinx-autobuild](https://pypi.org/project/sphinx-autob
 
 ### gettext
 
-Gettext task extracts text strings from documents to message templates (`.pot` files) and create/update existing messages (`.po`).
+Gettext task extracts text strings from documents to message templates (`.pot` files) and creates/updates existing messages (`.po`).
 
 In multi-lingual documentation, the gettext task should be performed after every document change.
 
@@ -163,7 +167,7 @@ In multi-lingual documentation, the gettext task should be performed after every
 nox -s gettext
 ```
 
-After completion, POT files are temporary stored at `<OUTDIR>/gettext/` and PO files at `source/locales/`. For example, for {confval}`LANGUAGES` set to `["cs", "he"]` the following messages are created:
+After completion, POT files are temporarily stored at `<OUTDIR>/gettext/` and PO files at `source/locales/`. For example, for {confval}`LANGUAGES` set to `["cs", "he"]`, the following messages are created:
 
 ```
 source

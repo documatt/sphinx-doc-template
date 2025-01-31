@@ -9,9 +9,9 @@
 
 ## File layout structure
 
-{{ project }} follows failry specific file system layout. This standarized structure eases maintenance and switching between multiple projects.
+{{ project }} follows a fairly specific file system layout. This standardized structure eases maintenance and switching between multiple projects.
 
-All tasks, like build and preview, in [`noxfile.py` file](#nox-tasks) and this documentation assumes the structure.
+All tasks, like build and preview, are in the [noxfile.py file](#nox-tasks), and this documentation assumes the structure.
 
 ```
 .
@@ -37,13 +37,13 @@ All tasks, like build and preview, in [`noxfile.py` file](#nox-tasks) and this d
 └── pyproject.toml          ┘
 ```
 
-The files and folders are of three purposes:
+The files and folders are for three purposes:
 
 - Sphinx project sources. Regular files found in Sphinx projects like .md, .rst, images, conf.py.
-- When build by [tasks](#nox-tasks), output goes to (by default) to `build/`.
+- When built by [tasks](#nox-tasks), output goes to (by default) to `build/`.
 - Meta files. Not the documentation itself. Like dependencies in `pyproject.toml`, license, standard `.gitignore`, etc.
 
-Everything except output directory should be versioned.
+Everything except the output directory should be versioned.
 
 {#outdir-structure}
 
@@ -51,7 +51,7 @@ Everything except output directory should be versioned.
 
 The output directory (the {confval}`OUTDIR`) is organized to `<builder>/<language>/` directory layout.
 
-For example, for builders dirhtml and html, and languages en, cs and he, the following folder and files are created (irrelevant files omitted):
+For example, for builders dirhtml and html, and languages en, cs, and he, the following folder and files are created (irrelevant files omitted):
 
 ```
 .

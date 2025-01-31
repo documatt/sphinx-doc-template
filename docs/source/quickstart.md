@@ -9,14 +9,14 @@
 You will need Python and two Python tools:
 
 - [Copier]: scaffolding tool that will generate from this template a Sphinx project on your disk
-- [Nox]: automation tool for easier building docs from a project sources
+- [Nox]: automation tool for easier building docs from project sources
 
-The recommended way to install and running is using the [uv] tool. The uv can even install Python for you, if you don't have it already.
+The recommended way to install and run is using the [uv] tool. The uv can even install Python for you if you don't have it already.
 
 1. [**Install uv**](https://docs.astral.sh/uv/getting-started/installation/) for your environment.
 
    ```{seealso}
-   See [Copier docs][Copier] and [Nox docs][Nox] for other instalation options, if uv is not suitable for you.
+   See [Copier docs][Copier] and [Nox docs][Nox] for other installation options if uv is not suitable for you.
    ```
 
 ## Tutorial
@@ -27,9 +27,9 @@ The recommended way to install and running is using the [uv] tool. The uv can ev
    uvx --with jinja2-time copier copy --trust https://github.com/documatt/copier-sphinx-docs-template my-documentation
    ```
 
-   This a bit lenghty command handles everything. It will install Copier, its `jinja2-time` dependency and call Copier with `--trust` to allow use `jinja2-time`.
+   This lengthy command handles everything. It will install Copier, its `jinja2-time` dependency, and call Copier with `--trust` to allow the use of `jinja2-time`.
 
-1. **Examine the template.** A new shiny folder, e.g., `my-documentation`, with a Sphinx doc project has been created for you.
+1. **Examine the template.** A new shiny folder, e.g., `my-documentation`, with a Sphinx doc project, has been created for you.
 
    ```
    $ cd my-documentation
@@ -54,11 +54,11 @@ The recommended way to install and running is using the [uv] tool. The uv can ev
        └── sections.md
    ```
 
-   Learn more about template's [file structure](#file-structure).
+   Learn more about the template's [file structure](#file-structure).
 
-1. **Examine `noxfile.py`.** This file is read by [Nox] tool and contains common tasks as a "build HTML", "preview", etc.
+1. **Examine `noxfile.py`.** This file is read by the [Nox] tool and contains common tasks such as a "build HTML", "preview", etc.
 
-   Some tasks are just simple command, but preview or translate requires series of operations, including installing dependencies, copying files, etc. With Nox will run these complex scripts with just `nox -s <task>` command.
+   Some tasks are just simple commands, but preview or translate requires a series of operations, including installing dependencies, copying files, etc. With Nox, we will run these complex scripts with just `nox -s <task>` command.
 
    Learn more about available Nox tasks in [](usage.md).
 
@@ -81,6 +81,6 @@ The recommended way to install and running is using the [uv] tool. The uv can ev
    nox > Session build was successful.
    ```
 
-   The Nox will handle of everything - installing Sphinx and its extensions and trigger Sphinx build.
+   The Nox will handle everything - installing Sphinx and its extensions and triggering the Sphinx build.
 
-1. **Enjoy.** See other all the cool [features](features.md) provided by the template.
+1. **Enjoy.** See all the other cool [features](features.md) provided by the template.

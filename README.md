@@ -37,9 +37,9 @@
 
 <!-- Very short intro -->
 
-The repository is the [Copier](https://copier.readthedocs.io) template. Copier is a command-line tool for creating projects from templates. It requires Python installed, but no knowledge of Python to use.
+The repository is the [Copier](https://copier.readthedocs.io) template. Copier is a command-line tool for creating projects from templates. It requires Python installed but no knowledge of Python to use.
 
-The recommended way to install Copier, Copier dependency `jinja2_time` is [uv](https://docs.astral.sh/uv/). The uv can even install Python for you, if you don't have it already.
+The recommended way to install the Copier, Copier dependency `jinja2_time,` is [uv](https://docs.astral.sh/uv/). The uv can even install Python if you don't already have it.
 
 With uv installed, open the terminal and
 
@@ -76,7 +76,7 @@ Learn more in [📚documentation](https://documatt.com/copier-sphinx-docs-templa
 
 ## Community and contributions
 
-Bug repors, feature requests, or all contributions are welcome at our [📟 GitHub homepage](https://github.com/documatt/copier-sphinx-docs-template/).
+Bug reports, feature requests, or all contributions are welcome at our [📟 GitHub homepage](https://github.com/documatt/copier-sphinx-docs-template/).
 
 Connect with other fellows who are building with Sphinx. Share knowledge, get help, and contribute to the open-source project. Check out our [Documatt Community](https://documatt.com/community) page to see featured material and upcoming events.
 
@@ -91,6 +91,6 @@ Join our community here:
 
 ## Legal
 
-Project is is MIT licensed.
+The project is MIT-licensed.
 
 Icon "copy" by [TabletIcons](https://tablericons.com/icon/copy).
