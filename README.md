@@ -3,7 +3,7 @@
 <div align="center">
 
 <a href="https://documatt.com/copier-sphinx-docs-template">
-    <img src="https://github.com/documatt/copier-sphinx-docs-template/blob/main/hero.svg?raw=true" alt="Project hero image">
+    <img src="https://github.com/documatt/copier-sphinx-docs-template/blob/main/hero.png?raw=true" alt="Project hero image">
 </a>
 
 <!-- overview -->
