@@ -51,7 +51,7 @@ Answer the series of questions, and you are ready to go. You have the skeleton o
 
 <!-- TODO: Screenshot / video (animovaný png/webp?) -->
 <div align="center">
-    <img alt="Quickstart" src="https://raw.githubusercontent.com/cruft/cruft/master/art/example.gif">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/6iVeyCvgjeY?si=YHxZr2eYtQya102a" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 ## Key Features
