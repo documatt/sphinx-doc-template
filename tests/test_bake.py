@@ -2,6 +2,7 @@
 Tests if generating template works.
 """
 
+import difflib
 import os
 import subprocess
 from pathlib import Path
@@ -16,7 +17,9 @@ PROJECT_ROOT = str(Path(__file__).parent.parent)
 FROZEN_TEST_DATE = "2025-01-25"
 
 
-def deep_compare_dirs(left, right, diff_files=[], left_only=[], right_only=[]):
+def deep_compare_dirs(
+    left: Path, right: Path, diff_files=[], left_only=[], right_only=[]
+):
     """Compare dirs recursively, including file content, and ignore .pickle and .doctree files."""
     cmp = DeepDirCmp(left, right)
 
@@ -27,7 +30,13 @@ def deep_compare_dirs(left, right, diff_files=[], left_only=[], right_only=[]):
 
     def get_diff_files(cmp):
         """Filter out files based on the ignored names list."""
-        return list(filter(ignored_names, cmp.get_diff_files_recursive()))
+        diff_files = list(filter(ignored_names, cmp.get_diff_files_recursive()))
+
+        # show diff of diff_files
+        for file in diff_files:
+            show_diff(cmp.left / file, cmp.right / file)
+
+        return diff_files
 
     def get_left_files(cmp):
         return list(filter(ignored_names, cmp.get_left_only_recursive()))
@@ -53,6 +62,19 @@ def shallow_compare_dirs(dir1, dir2):
     files_in_dir2 = get_files(dir2)
 
     assert files_in_dir1 == files_in_dir2
+
+
+def show_diff(file1: Path, file2: Path):
+    """Show the diff between two files."""
+    with open(file1, "r") as f1, open(file2, "r") as f2:
+        f1_lines = f1.readlines()
+        f2_lines = f2.readlines()
+
+    diff = difflib.unified_diff(
+        f1_lines, f2_lines, fromfile=str(file1), tofile=str(file2)
+    )
+    for line in diff:
+        print(line, end="")
 
 
 @freeze_time(FROZEN_TEST_DATE)

@@ -48,7 +48,7 @@ default_language:
 
 other_languages:
   default: []
-  help: If you want to translate your documentation to other langauges, type them here or type '[]' (an empty list). The value must by a valid Python list expression like ['es', 'fr', 'de'].",
+  help: If you want to translate your documentation to other languages, type them here or type '[]' (an empty list). The value must by a valid Python list expression like ['es', 'fr', 'de'].",
   validator: "{% if not other_languages is sequence %}Value must be a valid Python list{% elif default_language in other_languages %}The default language '{{ default_language }}' CANNOT be in other languages.{% endif %}"
 
 default_builder:
