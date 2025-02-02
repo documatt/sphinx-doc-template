@@ -19,11 +19,11 @@ DEFAULT_SPHINX_OPTS = [
     "-q",
 ]
 
-BUILDERS = ["{{ default_builder }}"] + {{ other_builders}}
 DEFAULT_BUILDER = "{{ default_builder }}"
+BUILDERS = [DEFAULT_BUILDER] + {{ other_builders}}
 
-LANGUAGES = ["{{ default_language }}"] + {{ other_languages }}
 DEFAULT_LANGUAGE = "{{ default_language }}"
+LANGUAGES = [DEFAULT_LANGUAGE] + {{ other_languages }}
 
 # Speed up builds by reusing virtualenvs
 nox.options.reuse_existing_virtualenvs = True

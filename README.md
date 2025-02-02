@@ -35,7 +35,6 @@
 
 </div>
 
-
 <!-- Very short intro -->
 
 The repository is the [Copier](https://copier.readthedocs.io) template. Copier is a command-line tool for creating projects from templates. It requires Python installed but no knowledge of Python to use.
@@ -50,7 +49,11 @@ uvx --with jinja2-time copier copy --trust https://github.com/documatt/copier-sp
 
 Answer the series of questions, and you are ready to go. You have the skeleton of a completely functional Sphinx project in `my-new-docs` folder in just a few moments.
 
-https://github.com/user-attachments/assets/613f234f-5629-40e9-a313-8b2c5b29f397
+## Video
+
+<!-- Link created with https://githubvideo.com -->
+
+[![Copier Sphinx Docs Template Quickstart](http://i.ytimg.com/vi/6iVeyCvgjeY/hqdefault.jpg)](https://www.youtube.com/watch?v=6iVeyCvgjeY)
 
 ## Key Features
 
