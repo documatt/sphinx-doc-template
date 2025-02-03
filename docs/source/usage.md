@@ -29,7 +29,9 @@ Default list of [`sphinx-build` arguments](https://www.sphinx-doc.org/en/master/
 ```
 
 ```{confval} SPHINX_AUTOBUILD_OPTS
-List of [`sphinx-autobuild` commandline arguments](https://github.com/sphinx-doc/sphinx-autobuild) passed to the [](#nox-preview) task.
+List of [`sphinx-autobuild` arguments](https://github.com/sphinx-doc/sphinx-autobuild) passed to the [](#nox-preview) task.
+
+For example, `--port 0` to use first found free port instead of default 8000.
 ```
 
 ```{confval} BUILDERS
@@ -58,7 +60,7 @@ The generated `noxfile.py` offers the following tasks. You can invoke a task wit
 
 ### build
 
-Build single builder and language. If not specified on the commandline, it uses default builder and language.
+Build single builder and language. If not specified on the commandline, it uses default builder and language. Creates a `<builder>/<language>/` folder for each builder and language as described in [](#outdir-structure).
 
 Build to default builder and language:
 
@@ -77,6 +79,8 @@ Will fail on error to prevent dead links and other problems.
 ### build_all
 
 Build all builders and languages configured. Creates a `<builder>/<language>/` folder for each builder and language as described in [](#outdir-structure).
+
+If you have no multiple languages and builders, it will do the same as [](#nox-build) task.
 
 ```
 nox -s build_all
