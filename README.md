@@ -49,11 +49,13 @@ uvx --with jinja2-time copier copy --trust https://github.com/documatt/copier-sp
 
 Answer the series of questions, and you are ready to go. You have the skeleton of a completely functional Sphinx project in `my-new-docs` folder in just a few moments.
 
-## Video
+## 🍿 Watch
 
 <!-- Link created with https://githubvideo.com -->
 
-[![Copier Sphinx Docs Template Quickstart](http://i.ytimg.com/vi/6iVeyCvgjeY/hqdefault.jpg)](https://www.youtube.com/watch?v=6iVeyCvgjeY)
+[![How to create Sphinx documentation from a template](http://i.ytimg.com/vi/6iVeyCvgjeY/hqdefault.jpg)](https://www.youtube.com/watch?v=6iVeyCvgjeY)
+
+[![How to preview Sphinx documentation?](http://i.ytimg.com/vi/uwzXODVOC-Q/hqdefault.jpg)](https://www.youtube.com/watch?v=uwzXODVOC-Q)
 
 ## Key Features
 
