@@ -40,6 +40,7 @@ The template comes with a few of the most popular Sphinx extensions. Extensions 
 - [sphinxcontrib.mermaid](https://sphinxcontrib-mermaid-demo.readthedocs.io/en/latest/) - Allows you to embed Mermaid graphs in your documents, including general flowcharts, sequence diagrams, Gantt diagrams, and more.
 - [sphinx-reredirects](https://documatt.com/sphinx-reredirects/) - manage redirects for moved pages in `conf.py`
 - [sphinx-sitemap](https://sphinx-sitemap.readthedocs.io/en/latest/) - generate `sitemap.xml`
+- [sphinx-copybutton](https://sphinx-copybutton.readthedocs.io/en/latest/) - adds "copy to clipboard" button to code examples
 
 ### Adding more extensions
 

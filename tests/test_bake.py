@@ -77,12 +77,17 @@ def show_diff(file1: Path, file2: Path):
         print(line, end="")
 
 
+# ! When running test locally (on dirty repo), add vcs_ref="HEAD" to run_copy()
+
+
 @freeze_time(FROZEN_TEST_DATE)
 def test_defaults(workaround_tmp_path: Path, datadir: Path):
     # *** Arrange ***
 
     # *** Act ***
-    run_copy(PROJECT_ROOT, workaround_tmp_path, unsafe=True, defaults=True)
+    run_copy(
+        PROJECT_ROOT, workaround_tmp_path, unsafe=True, defaults=True, vcs_ref="HEAD"
+    )
 
     # *** Assert ***
     deep_compare_dirs(workaround_tmp_path, datadir / "defaults")
@@ -129,6 +134,7 @@ def test_nox_build_all_redirect(workaround_tmp_path: Path, datadir: Path):
         unsafe=True,
         defaults=True,
         data={"other_languages": ["cs", "he"], "other_builders": ["dirhtml"]},
+        vcs_ref="HEAD",
     )
     subprocess.run(
         ["nox", "-s", "build_all", "redirect"], check=True, cwd=workaround_tmp_path

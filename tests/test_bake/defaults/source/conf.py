@@ -26,6 +26,7 @@ extensions = [
     "sphinxcontrib.mermaid",
     "sphinx_reredirects",
     "sphinx_sitemap",
+    "sphinx_copybutton",
 ]
 
 nitpicky = True
