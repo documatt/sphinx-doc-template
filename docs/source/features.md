@@ -1,4 +1,4 @@
-# Key Features
+# Features
 
 ```{include} ../../README.md
 :start-after: <!-- features -->

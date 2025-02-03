@@ -28,6 +28,10 @@ Base output directory for builds. By default, `build`. But the actual output wil
 Default list of [`sphinx-build` arguments](https://www.sphinx-doc.org/en/master/man/sphinx-build.html) passed to every build task.
 ```
 
+```{confval} SPHINX_AUTOBUILD_OPTS
+List of [`sphinx-autobuild` commandline arguments](https://github.com/sphinx-doc/sphinx-autobuild) passed to the [](#nox-preview) task.
+```
+
 ```{confval} BUILDERS
 List of Sphinx builders, i.e., formats, which will be built by [](#build_all) task. E.g., `["html", "dirhtml"]`.
 ```
