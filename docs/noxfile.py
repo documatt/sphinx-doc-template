@@ -18,6 +18,7 @@ DEFAULT_SPHINX_OPTS = [
     # Be quiet
     "-q",
 ]
+SPHINX_AUTOBUILD_OPTS = []
 
 DEFAULT_BUILDER = "html"
 BUILDERS = [DEFAULT_BUILDER] + []
@@ -136,7 +137,6 @@ def preview(session):
     clean(session)
 
     # Build sample and serve
-    AUTOBUILD_ARGS = []
     session.run(
         "sphinx-autobuild",
         "-b",
@@ -144,7 +144,7 @@ def preview(session):
         INDIR,
         get_outdir_path(builder, language),
         *get_sphinx_opts(language),
-        *AUTOBUILD_ARGS,
+        *SPHINX_AUTOBUILD_OPTS,
     )
 
 

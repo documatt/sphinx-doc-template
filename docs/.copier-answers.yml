@@ -1,5 +1,5 @@
 # Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
-_commit: v0.1.0
+_commit: v0.2.0
 _src_path: https://github.com/documatt/copier-sphinx-docs-template
 default_builder: html
 default_language: en

@@ -10,6 +10,7 @@ dependencies = [
     "sphinxcontrib.mermaid==1.0.0",
     "sphinx-reredirects==0.1.5",
     "sphinx-sitemap==2.6.0",
-    "furo"
+    "furo",
+    "sphinx-copybutton==0.5.2",
 ]
 requires-python = ">=3.11"
