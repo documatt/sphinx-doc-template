@@ -57,7 +57,7 @@ def get_sphinx_opts(lang: str) -> list[str]:
     ]
 
 
-def get_builder_langauge(session) -> tuple[str, str]:
+def get_builder_language(session) -> tuple[str, str]:
     """Get builder and language. Either defaults or from commandline."""
     if session.posargs:
         return session.posargs[0], session.posargs[1]
@@ -117,7 +117,7 @@ def build(session):
     """Build documentation for a builder/language."""
     install_dependencies(session)
 
-    builder, language = get_builder_langauge(session)
+    builder, language = get_builder_language(session)
     run_sphinx_builder(session, builder, language)
 
 
@@ -133,7 +133,7 @@ def preview(session):
     install_dependencies(session, "sphinx-autobuild==2024.10.3")
 
     # Build sample and serve
-    builder, language = get_builder_langauge(session)
+    builder, language = get_builder_language(session)
     session.run(
         "sphinx-autobuild",
         "-b",
