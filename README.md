@@ -1,9 +1,9 @@
-# Copier Sphinx Documentation Template
+# Sphinx Documentation Template
 
 <div align="center">
 
-<a href="https://documatt.com/copier-sphinx-docs-template">
-    <img src="https://github.com/documatt/copier-sphinx-docs-template/blob/main/hero.png?raw=true" alt="Project hero image">
+<a href="https://documatt.com/sphinx-doc-template">
+    <img src="https://github.com/documatt/sphinx-doc-template/blob/main/hero.png?raw=true" alt="Project hero image">
 </a>
 
 <!-- overview -->
@@ -15,20 +15,20 @@
 <!-- .overview -->
 
 <p>
-    <a href="https://documatt.com/copier-sphinx-docs-template">📚Documentation</a> ·
-    <a href="https://github.com/documatt/copier-sphinx-docs-template">📟 Source code</a>
+    <a href="https://documatt.com/sphinx-doc-template">📚Documentation</a> ·
+    <a href="https://github.com/documatt/sphinx-doc-template">📟 Source code</a>
 </p>
 
 <p>
     <a href="https://github.com/copier-org/copier"><img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/copier-org/copier/master/img/badge/badge-grayscale-inverted-border-orange.json&labelColor=097cba&color=163B36" alt="Made with Copier badge"/></a>
-    <a href="https://github.com/documatt/copier-sphinx-docs-template">
-        <img src="https://img.shields.io/github/stars/documatt/copier-sphinx-docs-template?style=flat&logo=github&labelColor=097cba&color=163B36" alt="GitHub Repo stars badge">
+    <a href="https://github.com/documatt/sphinx-doc-template">
+        <img src="https://img.shields.io/github/stars/documatt/sphinx-doc-template?style=flat&logo=github&labelColor=097cba&color=163B36" alt="GitHub Repo stars badge">
     </a>
-    <a href="https://github.com/documatt/copier-sphinx-docs-template/actions/workflows/test.yaml">
-        <img src="https://github.com/documatt/copier-sphinx-docs-template/actions/workflows/test.yaml/badge.svg" alt="GitHub tests badge">
+    <a href="https://github.com/documatt/sphinx-doc-template/actions/workflows/test.yaml">
+        <img src="https://github.com/documatt/sphinx-doc-template/actions/workflows/test.yaml/badge.svg" alt="GitHub tests badge">
     </a>
     <img src="https://img.shields.io/badge/codestyle-Prettier-blue?labelColor=097cba&color=163B36" alt="Code style Prettier badge">
-    <a href="https://raw.githubusercontent.com/documatt/copier-sphinx-docs-template/refs/heads/main/LICENSE">
+    <a href="https://raw.githubusercontent.com/documatt/sphinx-doc-template/refs/heads/main/LICENSE">
         <img src="https://img.shields.io/badge/license-MIT-blue?labelColor=097cba&color=163B36" alt="MIT licence badge">
     </a>
 </p>
@@ -44,7 +44,7 @@ The recommended way to install the Copier, Copier dependency `jinja2_time,` is [
 With uv installed, open the terminal and
 
 ```
-uvx --with jinja2-time copier copy --trust https://github.com/documatt/copier-sphinx-docs-template my-new-docs
+uvx --with jinja2-time copier copy --trust https://github.com/documatt/sphinx-doc-template my-new-docs
 ```
 
 Answer the series of questions, and you are ready to go. You have the skeleton of a completely functional Sphinx project in `my-new-docs` folder in just a few moments.
@@ -53,9 +53,9 @@ Answer the series of questions, and you are ready to go. You have the skeleton o
 
 <!-- Link created with https://githubvideo.com -->
 
-[![How to create Sphinx documentation from a template](http://i.ytimg.com/vi/6iVeyCvgjeY/hqdefault.jpg)](https://www.youtube.com/watch?v=6iVeyCvgjeY)
+[![How to create Sphinx documentation from a template](http://i.ytimg.com/vi/tVKpPXw5deg/hqdefault.jpg)](https://www.youtube.com/watch?v=tVKpPXw5deg)
 
-[![How to preview Sphinx documentation?](http://i.ytimg.com/vi/uwzXODVOC-Q/hqdefault.jpg)](https://www.youtube.com/watch?v=uwzXODVOC-Q)
+[![How to preview Sphinx documentation?](http://i.ytimg.com/vi/tVKpPXw5deg/hqdefault.jpg)](https://www.youtube.com/watch?v=tVKpPXw5deg)
 
 ## Key Features
 
@@ -75,11 +75,11 @@ The Sphinx documentation template key features:
 
 <!-- .features -->
 
-Learn more in [📚documentation](https://documatt.com/copier-sphinx-docs-template).
+Learn more in [📚documentation](https://documatt.com/sphinx-doc-template).
 
 ## Community and contributions
 
-Bug reports, feature requests, or all contributions are welcome at our [📟 GitHub homepage](https://github.com/documatt/copier-sphinx-docs-template/).
+Bug reports, feature requests, or all contributions are welcome at our [📟 GitHub homepage](https://github.com/documatt/sphinx-doc-template/).
 
 Connect with other fellows who are building with Sphinx. Share knowledge, get help, and contribute to the open-source project. Check out our [Documatt Community](https://documatt.com/community) page to see featured material and upcoming events.
 

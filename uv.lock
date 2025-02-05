@@ -491,7 +491,7 @@ wheels = [
 ]
 
 [[package]]
-name = "sphinx-docs-template"
+name = "sphinx-doc-template"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [

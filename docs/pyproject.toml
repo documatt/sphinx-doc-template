@@ -1,5 +1,5 @@
 [project]
-name = "copier-sphinx-docs-template-docs"
+name = "sphinx-doc-template-docs"
 version = "0.1.0"
 dependencies = [
     "sphinx==8.1.3",

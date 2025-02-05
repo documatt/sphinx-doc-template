@@ -109,7 +109,7 @@ mermaid_version = "11.0.1"
 # https://sphinx-sitemap.readthedocs.io/
 
 # Turn off language alternatives in sitemap
-# https://github.com/documatt/cookiecutter-sphinx-docs-template/issues/1
+# https://github.com/documatt/sphinx-doc-template/issues/1
 sitemap_locales = [None]
 
 # Default is {lang}{version}{link}, but version is not used in URLs in this project

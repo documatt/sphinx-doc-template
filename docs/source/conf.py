@@ -8,7 +8,7 @@ from datetime import date
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = "Copier Sphinx Documentation Template"
+project = "Sphinx Documentation Template"
 author = "Documatt.com, s.r.o."
 version = "0.1.0"
 copyright = f"{date.today().year}, {author}"
@@ -55,7 +55,7 @@ translation_progress_classes = False
 
 html_title = project
 
-html_baseurl = "https://documatt.com/copier-sphinx-doc-template"
+html_baseurl = "https://documatt.com/sphinx-doc-template"
 if not html_baseurl.endswith("/"):
     html_baseurl += "/"
 
@@ -109,7 +109,7 @@ mermaid_version = "11.0.1"
 # https://sphinx-sitemap.readthedocs.io/
 
 # Turn off language alternatives in sitemap
-# https://github.com/documatt/cookiecutter-sphinx-docs-template/issues/1
+# https://github.com/documatt/sphinx-doc-template/issues/1
 sitemap_locales = [None]
 
 # Default is {lang}{version}{link}, but version is not used in URLs in this project

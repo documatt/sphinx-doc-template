@@ -7,4 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- ref: rename project to sphinx-doc-template (instead of copier-sphinx-docs-template)
+- ref: reduce repating code in noxfile.py
+
+## [0.2.0]
+
+- feat: add sphinx-copybutton extension
+- docs: improve docs
+
+## [0.1.0]
+
 Initial version.

@@ -1,5 +1,5 @@
 [project]
-name = "sphinx-docs-template"
+name = "sphinx-doc-template"
 version = "0.1.0"
 requires-python = ">=3.11"
 dependencies = [
@@ -35,8 +35,8 @@ classifiers = [
 ]
 
 [project.urls]
-repository = "https://github.com/documatt/sphinx-docs-template"
-homepage = "https://documatt.com/sphinx-docs-template"
+repository = "https://github.com/documatt/sphinx-doc-template"
+homepage = "https://documatt.com/sphinx-doc-template"
 
 [tool.pytest.ini_options]
 # Recommended import mode for new projects
