@@ -53,7 +53,7 @@ Answer the series of questions, and you are ready to go. You have the skeleton o
 
 <!-- Link created with https://githubvideo.com -->
 
-[![How to create Sphinx documentation from a template](http://i.ytimg.com/vi/tVKpPXw5deg/hqdefault.jpg)](https://www.youtube.com/watch?v=tVKpPXw5deg)
+[![How to create Sphinx documentation from a template](http://i.ytimg.com/vi/SvtTbJW7KLg/hqdefault.jpg)](https://www.youtube.com/watch?v=SvtTbJW7KLg)
 
 [![How to preview Sphinx documentation?](http://i.ytimg.com/vi/tVKpPXw5deg/hqdefault.jpg)](https://www.youtube.com/watch?v=tVKpPXw5deg)
 
