@@ -45,6 +45,8 @@ exclude_patterns = [
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-internationalisation
 
 language = "en"
+# Due to sphinx-intl issue, we need to explicitly set the locale_dirs to its default value
+# https://github.com/sphinx-doc/sphinx-intl/issues/116
 locale_dirs = ["locales/"]
 gettext_compact = False
 translation_progress_classes = False

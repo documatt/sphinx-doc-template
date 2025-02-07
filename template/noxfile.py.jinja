@@ -148,7 +148,12 @@ def preview(session):
 @nox.session
 def gettext(session):
     """Generate .pot files and update .po files."""
+    if LANGUAGES == [DEFAULT_LANGUAGE]:
+        session.error("No additional languages to generate .pot files for.")
+
     install_dependencies(session, "sphinx-intl==2.2.0")
+
+    gettext_outdir = os.path.join(OUTDIR, "gettext")
 
     # Generate .pot files from Sphinx
     session.run(
@@ -156,7 +161,7 @@ def gettext(session):
         "-b",
         "gettext",
         INDIR,
-        os.path.join(OUTDIR, "gettext"),
+        gettext_outdir,
         *DEFAULT_SPHINX_OPTS,
     )
 
@@ -171,11 +176,14 @@ def gettext(session):
     # Update .po from .pot templates
     session.run(
         "sphinx-intl",
+        # Read locale_dirs to place .po files from conf.py
+        "-c",
+        os.path.join(INDIR, "conf.py"),
         # update .po files
         "update",
         # from .pot files at
         "-p",
-        os.path.join(OUTDIR, "gettext"),
+        gettext_outdir,
         # for supported languages
         *l_params,
         # no line wrapping

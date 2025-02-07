@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- ref: add "no other languages" error to gettext task and reduce repeating
 - ref: fix typo in noxfile.py
 - ref: don't run clean from preview task
 - ref: rename project to sphinx-doc-template (instead of copier-sphinx-docs-template)
