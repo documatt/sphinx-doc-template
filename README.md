@@ -77,6 +77,10 @@ The Sphinx documentation template key features:
 
 Learn more in [📚documentation](https://documatt.com/sphinx-doc-template).
 
+## Sphinx Theme Template
+
+Are you looking for a **theme template** instead? See also our [sphinx-theme-template](https://github.com/documatt/sphinx-theme-template).
+
 ## Community and contributions
 
 Bug reports, feature requests, or all contributions are welcome at our [📟 GitHub homepage](https://github.com/documatt/sphinx-doc-template/).
