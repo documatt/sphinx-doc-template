@@ -1,5 +1,3 @@
-from datetime import date
-
 # Configuration file for the Sphinx documentation builder.
 #
 # For the full list of built-in configuration values, see the documentation:
@@ -11,7 +9,7 @@ from datetime import date
 project = "My Documentation"
 author = "John Doe"
 version = "0.1.0"
-copyright = f"{date.today().year}, {author}"
+copyright = f"%Y, {author}"
 
 
 # -- General configuration ---------------------------------------------------
