@@ -83,6 +83,7 @@ myst_enable_extensions = [
     "linkify",
     "substitution",
     "html_image",
+    "colon_fence",
 ]
 
 myst_substitutions = {
