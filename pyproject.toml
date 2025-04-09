@@ -4,13 +4,7 @@ version = "0.1.0"
 requires-python = ">=3.11"
 dependencies = [
     "copier>=9.4.1",
-    "jinja2-time==0.2.0",
-    # The remaining are rather "dev" dependencies
-    "pytest==8.3.4",
-    "nox==2024.10.9",
-    "pytest-datadir==1.5.0",
-    "deep_dircmp==0.2.0",
-    "freezegun==1.5.1",
+    "jinja2-time==0.2.0"
 ]
 readme = "README.md"
 description = "The Copier template for creating a modern Sphinx documentation project. Write in Markdown or reStructuredText, translate to multiple languages, boost with popular extensions, and enjoy automatic live reload on change."
@@ -32,6 +26,15 @@ classifiers = [
     "Operating System :: OS Independent",
     "Topic :: Documentation",
     "Topic :: Software Development :: Documentation",
+]
+
+[dependency-groups]
+dev = [
+    "deep-dircmp>=0.2.0",
+    "freezegun>=1.5.1",
+    "nox>=2024.10.9",
+    "pytest>=8.3.4",
+    "pytest-datadir>=1.5.0",
 ]
 
 [project.urls]
