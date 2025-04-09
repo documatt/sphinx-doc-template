@@ -83,18 +83,32 @@ def copier_copy(workaround_tmp_path, **kwargs):
         workaround_tmp_path,
         # ! When running test locally (on dirty repo), add vcs_ref="HEAD" to run_copy()
         vcs_ref="HEAD",
+        # Equivalent to --trust
+        unsafe=True,
         **kwargs,
     )
 
 
-def test_defaults(workaround_tmp_path: Path, datadir: Path):
+def test_defaults_source(workaround_tmp_path: Path, datadir: Path):
+    """Test if the source layout works."""
     # *** Arrange ***
 
     # *** Act ***
     copier_copy(workaround_tmp_path, defaults=True)
 
     # *** Assert ***
-    deep_compare_dirs(workaround_tmp_path, datadir / "defaults")
+    deep_compare_dirs(workaround_tmp_path, datadir / "default_source")
+
+
+def test_defaults_flat(workaround_tmp_path: Path, datadir: Path):
+    """Test if the flat layout works."""
+    # *** Arrange ***
+
+    # *** Act ***
+    copier_copy(workaround_tmp_path, defaults=True, data={"flat": True})
+
+    # *** Assert ***
+    deep_compare_dirs(workaround_tmp_path, datadir / "default_flat")
 
 
 def test_no_license(workaround_tmp_path: Path):
@@ -113,12 +127,23 @@ def test_no_license(workaround_tmp_path: Path):
     )
 
 
-def test_nox_build(workaround_tmp_path: Path):
-    """Test if `nox -s build` does not crash."""
+def test_nox_build_source(workaround_tmp_path: Path):
+    """Test if `nox -s build` of source layout does not crash."""
     # *** Arrange ***
 
     # *** Act ***
     copier_copy(workaround_tmp_path, defaults=True)
+
+    # *** Assert ***
+    subprocess.run(["nox", "-s", "build"], check=True, cwd=workaround_tmp_path)
+
+
+def test_nox_build_flat(workaround_tmp_path: Path):
+    """Test if `nox -s build` of flat layout does not crash."""
+    # *** Arrange ***
+
+    # *** Act ***
+    copier_copy(workaround_tmp_path, defaults=True, data={"flat": True})
 
     # *** Assert ***
     subprocess.run(["nox", "-s", "build"], check=True, cwd=workaround_tmp_path)

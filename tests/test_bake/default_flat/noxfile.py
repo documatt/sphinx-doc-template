@@ -7,8 +7,8 @@ import nox
 # *** Settings ***
 # *****************************************************************************
 
-INDIR = "{% if flat %}.{% else %}source{% endif %}"
-OUTDIR = "{% if flat %}_build{% else %}build{% endif %}"
+INDIR = "."
+OUTDIR = "_build"
 
 DEFAULT_SPHINX_OPTS = [
     # Speed up the build by using multiple cores
@@ -21,11 +21,11 @@ DEFAULT_SPHINX_OPTS = [
 ]
 SPHINX_AUTOBUILD_OPTS = []
 
-DEFAULT_BUILDER = "{{ default_builder }}"
-BUILDERS = [DEFAULT_BUILDER] + {{ other_builders}}
+DEFAULT_BUILDER = "dirhtml"
+BUILDERS = [DEFAULT_BUILDER] + []
 
-DEFAULT_LANGUAGE = "{{ default_language }}"
-LANGUAGES = [DEFAULT_LANGUAGE] + {{ other_languages }}
+DEFAULT_LANGUAGE = "en"
+LANGUAGES = [DEFAULT_LANGUAGE] + []
 
 # Speed up builds by reusing virtualenvs
 nox.options.reuse_existing_virtualenvs = True

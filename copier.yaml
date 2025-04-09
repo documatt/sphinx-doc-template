@@ -71,3 +71,14 @@ other_builders:
     - singlehtml
   multiselect: true
   validator: "{% if default_builder in other_builders %}The default builder '{{ default_builder }}' CANNOT be in other builders.{% endif %}"
+
+flat:
+  type: bool
+  default: false
+  help: "You have two options for placing document sources. Either, you use a flat structure, where all files are in the root, or you under 'source' directory within the root. The flat structure is recommended if you are creating 'docs/` directory in your project. The source structure is recommended if you are creating a separate repository for your documentation. If you are not sure, use the source."
+  validator: "{% if not flat %}Value cannot be empty{% endif %}"
+
+_tasks:
+  # Move everything under source/ to / to create flat structure
+  - command: "python3 {{ _copier_conf.src_path }}{{ _copier_conf.sep }}scripts{{ _copier_conf.sep }}flat.py"
+    when: "{{ flat }}"
