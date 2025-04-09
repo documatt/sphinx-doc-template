@@ -24,7 +24,7 @@ The recommended way to install and run is using the [uv] tool. The uv can even i
 1. **Answer questions.** Open the terminal, choose a destination folder (use `.` for current), and follow the wizard. E.g.,:
 
    ```
-   uvx copier copy https://github.com/documatt/sphinx-doc-template my-documentation
+   uvx copier copy gh:documatt/sphinx-doc-template my-documentation
    ```
 
    This command handles everything. It will install Copier and call Copier.
