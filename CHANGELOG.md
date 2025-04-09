@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- Change default builder to dirhtml
 - Explicitly declare dev deps in generated pyproject.toml (nox, sphinx-autobuild, ...)
 - Use uv as nox default backend in generated projects
 - Ask for year used in copyright, license, etc. (remove dependency on Jinja time)

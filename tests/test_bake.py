@@ -132,7 +132,7 @@ def test_nox_build_all_redirect(workaround_tmp_path: Path, datadir: Path):
     copier_copy(
         workaround_tmp_path,
         defaults=True,
-        data={"other_languages": ["cs", "he"], "other_builders": ["dirhtml"]},
+        data={"other_languages": ["cs", "he"], "other_builders": ["html"]},
     )
     subprocess.run(
         ["nox", "-s", "build_all", "redirect"], check=True, cwd=workaround_tmp_path

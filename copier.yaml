@@ -55,19 +55,19 @@ other_languages:
   validator: "{% if not other_languages is sequence %}Value must be a valid Python list{% elif default_language in other_languages %}The default language '{{ default_language }}' CANNOT be in other languages.{% endif %}"
 
 default_builder:
-  help: The main output format of your documentation. Enter the valid Sphinx builder like 'html'.
-  default: html
+  help: The main output format of your documentation. 'dirhtml' creates URLs like '/guide/install/' and 'html' creates URLs like '/guide/install.html'. If you are not sure, use 'dirhtml'.
+  default: dirhtml
   choices:
-    - html
     - dirhtml
+    - html
     - singlehtml
 
 other_builders:
   default: []
   help: "If you want to build your documentation to other formats, choose additional builders here. "
   choices:
-    - html
     - dirhtml
+    - html
     - singlehtml
   multiselect: true
   validator: "{% if default_builder in other_builders %}The default builder '{{ default_builder }}' CANNOT be in other builders.{% endif %}"
