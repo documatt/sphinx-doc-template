@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Ask if generate LICENSE file
 - Add VS Code support (sample settings and recommended extensions)
 - Add "no other languages" error to gettext task and reduce repeating
 - Use dynamic year in conf.py copyright

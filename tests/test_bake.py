@@ -97,20 +97,20 @@ def test_defaults(workaround_tmp_path: Path, datadir: Path):
     deep_compare_dirs(workaround_tmp_path, datadir / "defaults")
 
 
-def test_license_other(workaround_tmp_path: Path):
+def test_no_license(workaround_tmp_path: Path):
     # *** Arrange ***
 
     # *** Act ***
     copier_copy(
         workaround_tmp_path,
         defaults=True,
-        data={"license": "Other"},
+        data={"license": "None"},
     )
 
     # *** Assert ***
-    assert (
-        workaround_tmp_path / "LICENSE"
-    ).read_text() == "PLEASE REPLACE THIS FILE WITH YOUR LICENSE FILE"
+    assert (workaround_tmp_path / "LICENSE").exists() is False, (
+        "LICENSE file should not be created"
+    )
 
 
 def test_nox_build(workaround_tmp_path: Path):

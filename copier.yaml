@@ -24,13 +24,13 @@ year:
 
 license:
   type: str
-  help: The license for the project. Like 'MIT'. Simple and permissive open-source license is 'MIT'. If none of above, choose 'Other' and replace in 'LICENSE' file.
+  help: The license for the project. Like 'MIT'. Simple and permissive open-source license is 'MIT'. If you don't want to create LICENSE file or create it manually later, choose 'None'.
   default: MIT
   choices:
     - MIT
     - BSD-3-Clause
     - GPL-3.0
-    - Other
+    - None
 
 html_baseurl:
   type: str
