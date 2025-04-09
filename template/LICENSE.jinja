@@ -1,7 +1,7 @@
 {%- if license == 'MIT' -%}
 MIT License
 
-Copyright (c) {% now 'utc', '%Y' %} {{ project_author }}
+Copyright (c) {{ year }} {{ project_author }}
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -23,7 +23,7 @@ OR OTHER DEALINGS IN THE SOFTWARE.
 {%- elif license == 'BSD3' -%}
 The 3-Clause BSD License
 
-Copyright {% now 'utc', '%Y' %} {{ project_author }}
+Copyright {{ year }} {{ project_author }}
 
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
 
@@ -689,7 +689,7 @@ Also add information on how to contact you by electronic and paper mail.
   If the program does terminal interaction, make it output a short
 notice like this when it starts in an interactive mode:
 
-    {{ project_name }} Copyright (C) {% now 'utc', '%Y' %} {{ project_author }}
+    {{ project_name }} Copyright (C) {{ year }} {{ project_author }}
     This program comes with ABSOLUTELY NO WARRANTY; for details type `show w'.
     This is free software, and you are welcome to redistribute it
     under certain conditions; type `show c' for details.

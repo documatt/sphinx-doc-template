@@ -24,10 +24,10 @@ The recommended way to install and run is using the [uv] tool. The uv can even i
 1. **Answer questions.** Open the terminal, choose a destination folder (use `.` for current), and follow the wizard. E.g.,:
 
    ```
-   uvx --with jinja2-time copier copy --trust https://github.com/documatt/sphinx-doc-template my-documentation
+   uvx copier copy https://github.com/documatt/sphinx-doc-template my-documentation
    ```
 
-   This lengthy command handles everything. It will install Copier, its `jinja2-time` dependency, and call Copier with `--trust` to allow the use of `jinja2-time`.
+   This command handles everything. It will install Copier and call Copier.
 
 1. **Examine the template.** A new shiny folder, e.g., `my-documentation`, with a Sphinx doc project, has been created for you.
 

@@ -9,12 +9,11 @@ from pathlib import Path
 
 from copier import run_copy
 from deep_dircmp import DeepDirCmp
-from freezegun import freeze_time
 
 PROJECT_ROOT = str(Path(__file__).parent.parent)
 
-# Sync with the date in tests/test_bake/defaults/CHANGELOG.md
-FROZEN_TEST_DATE = "2025-01-25"
+# Sync with the date in tests/test_bake/defaults/LICENSE
+TEST_YEAR = "2025"
 
 
 def deep_compare_dirs(
@@ -77,17 +76,22 @@ def show_diff(file1: Path, file2: Path):
         print(line, end="")
 
 
-# ! When running test locally (on dirty repo), add vcs_ref="HEAD" to run_copy()
+def copier_copy(workaround_tmp_path, **kwargs):
+    """Run copier to generate the project."""
+    run_copy(
+        PROJECT_ROOT,
+        workaround_tmp_path,
+        # ! When running test locally (on dirty repo), add vcs_ref="HEAD" to run_copy()
+        vcs_ref="HEAD",
+        **kwargs,
+    )
 
 
-@freeze_time(FROZEN_TEST_DATE)
 def test_defaults(workaround_tmp_path: Path, datadir: Path):
     # *** Arrange ***
 
     # *** Act ***
-    run_copy(
-        PROJECT_ROOT, workaround_tmp_path, unsafe=True, defaults=True, vcs_ref="HEAD"
-    )
+    copier_copy(workaround_tmp_path, defaults=True)
 
     # *** Assert ***
     deep_compare_dirs(workaround_tmp_path, datadir / "defaults")
@@ -97,10 +101,8 @@ def test_license_other(workaround_tmp_path: Path):
     # *** Arrange ***
 
     # *** Act ***
-    run_copy(
-        PROJECT_ROOT,
+    copier_copy(
         workaround_tmp_path,
-        unsafe=True,
         defaults=True,
         data={"license": "Other"},
     )
@@ -116,25 +118,21 @@ def test_nox_build(workaround_tmp_path: Path):
     # *** Arrange ***
 
     # *** Act ***
-    run_copy(PROJECT_ROOT, workaround_tmp_path, unsafe=True, defaults=True)
+    copier_copy(workaround_tmp_path, defaults=True)
 
     # *** Assert ***
     subprocess.run(["nox", "-s", "build"], check=True, cwd=workaround_tmp_path)
 
 
-@freeze_time(FROZEN_TEST_DATE)
 def test_nox_build_all_redirect(workaround_tmp_path: Path, datadir: Path):
     """Test if `nox -s build_all redirect` works."""
     # *** Arrange ***
 
     # *** Act ***
-    run_copy(
-        PROJECT_ROOT,
+    copier_copy(
         workaround_tmp_path,
-        unsafe=True,
         defaults=True,
         data={"other_languages": ["cs", "he"], "other_builders": ["dirhtml"]},
-        vcs_ref="HEAD",
     )
     subprocess.run(
         ["nox", "-s", "build_all", "redirect"], check=True, cwd=workaround_tmp_path
@@ -151,10 +149,8 @@ def test_nox_gettext(workaround_tmp_path: Path, datadir: Path):
     # *** Arrange ***
 
     # *** Act ***
-    run_copy(
-        PROJECT_ROOT,
+    copier_copy(
         workaround_tmp_path,
-        unsafe=True,
         defaults=True,
         data={"other_languages": ["cs", "he"]},
     )

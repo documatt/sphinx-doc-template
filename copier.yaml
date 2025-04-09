@@ -1,6 +1,3 @@
-_jinja_extensions:
-  - jinja2_time.TimeExtension
-
 # Template lives in
 _subdirectory: template
 
@@ -18,6 +15,12 @@ project_slug:
 project_author: John Doe
 
 project_version: 0.1.0
+
+year:
+  type: int
+  default: 2025
+  help: The year of the project. Like '2025'. For copyright, license, etc. If you are not sure, use the current year."
+  validator: "{% if not year %}Value cannot be empty{% endif %}"
 
 license:
   type: str

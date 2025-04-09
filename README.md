@@ -39,12 +39,10 @@
 
 The repository is the [Copier](https://copier.readthedocs.io) template. Copier is a command-line tool for creating projects from templates. It requires Python installed but no knowledge of Python to use.
 
-The recommended way to install the Copier, Copier dependency `jinja2_time,` is [uv](https://docs.astral.sh/uv/). The uv can even install Python if you don't already have it.
-
-With uv installed, open the terminal and
+The recommended way to install the Copier is [uv](https://docs.astral.sh/uv/). The uv can even install Python if you don't already have it. With uv installed, open the terminal and
 
 ```
-uvx --with jinja2-time copier copy --trust https://github.com/documatt/sphinx-doc-template my-new-docs
+uvx copier copy https://github.com/documatt/sphinx-doc-template my-new-docs
 ```
 
 Answer the series of questions, and you are ready to go. You have the skeleton of a completely functional Sphinx project in `my-new-docs` folder in just a few moments.
