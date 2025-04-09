@@ -7,11 +7,30 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-- ref: add "no other languages" error to gettext task and reduce repeating
-- ref: fix typo in noxfile.py
-- ref: don't run clean from preview task
-- ref: rename project to sphinx-doc-template (instead of copier-sphinx-docs-template)
-- ref: reduce repating code in noxfile.py
+### Added
+
+- Add "no other languages" error to gettext task and reduce repeating
+- Use dynamic year in conf.py copyright
+
+### Changed
+
+- Use uv as nox default backend in generated projects
+- Ask for year used in copyright, license, etc. (remove dependency on Jinja time)
+- Rename project to sphinx-doc-template (instead of copier-sphinx-docs-template)
+- Reduce repating code in noxfile.py
+- Don't run clean from preview task
+
+### Deprecated
+
+### Removed
+
+- Stop generating CHANGELOG.md
+
+### Fixed
+
+- Fix typo in noxfile.py
+
+### Security
 
 ## [0.2.0]
 

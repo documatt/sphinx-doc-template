@@ -33,6 +33,9 @@ nox.options.reuse_existing_virtualenvs = True
 # No default sessions when "nox" is run (explicit is better than implicit)
 nox.options.sessions = []
 
+# Massively speed up the build by using uv
+nox.options.default_venv_backend = "uv"
+
 
 # *****************************************************************************
 # *** Helpers ***
