@@ -39,6 +39,9 @@ exclude_patterns = [
     ".DS_Store",
 ]
 
+suppress_warnings = ["myst.strikethrough"]
+
+
 # -- Options for internationalisation ----------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-internationalisation
 
@@ -84,6 +87,7 @@ myst_enable_extensions = [
     "substitution",
     "html_image",
     "colon_fence",
+    "strikethrough",
 ]
 
 myst_substitutions = {

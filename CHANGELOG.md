@@ -9,7 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Add `colon_fence` MyST extension to generated conf.py
+- Enable `strikethrough` MyST extension to generated conf.py
+- Enable `colon_fence` MyST extension to generated conf.py
 - Ask to generate flat structure (everything in root instead of `source/`)
 - Ask if generate LICENSE file
 - Add VS Code support (sample settings and recommended extensions)
