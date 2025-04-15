@@ -1,9 +1,9 @@
 # Overview
 
-```{include} ../../README.md
+:::{include} ../../README.md
 :start-after: <!-- overview -->
 :end-before: <!-- .overview -->
-```
+:::
 
 {#file-structure}
 

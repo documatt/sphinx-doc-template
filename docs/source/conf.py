@@ -78,6 +78,7 @@ templates_path = ["_templates"]
 # https://myst-parser.readthedocs.io/en/latest/configuration.html
 
 myst_enable_extensions = [
+    "colon_fence",
     "attrs_inline",
     "attrs_block",
     "deflist",

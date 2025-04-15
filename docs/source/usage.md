@@ -8,47 +8,47 @@ The following page is the reference of configuration variables and tasks in `nox
 
 [Nox]: https://nox.thea.codes/
 
-```{topic} Install Nox globally
+:::{topic} Install Nox globally
 If you have uv installed, run `uvx nox -s <task>`. But the `uv tool install nox` will install Nox globally, and you can type only `nox -s <task>`.
-```
+:::
 
 ## Configuration
 
 At the beginning of `noxfile.py` are a few configuration variables that influence most of the below described tasks.
 
-```{confval} INDIR
+:::{confval} INDIR
 Directory containing Markdown or reStructuredText document sources. By default, `source`.
-```
+:::
 
-```{confval} OUTDIR
+:::{confval} OUTDIR
 Base output directory for builds. By default, `build`. But the actual output will be in `<outdir>/<builder>/<language>/`, e.g. `build/html/en/`. See [](#outdir-structure).
-```
+:::
 
-```{confval} DEFAULT_SPHINX_OPTS
+:::{confval} DEFAULT_SPHINX_OPTS
 Default list of [`sphinx-build` arguments](https://www.sphinx-doc.org/en/master/man/sphinx-build.html) passed to every build task.
-```
+:::
 
-```{confval} SPHINX_AUTOBUILD_OPTS
+:::{confval} SPHINX_AUTOBUILD_OPTS
 List of [`sphinx-autobuild` arguments](https://github.com/sphinx-doc/sphinx-autobuild) passed to the [](#nox-preview) task.
 
 For example, `--port 0` to use first found free port instead of default 8000.
-```
+:::
 
-```{confval} BUILDERS
+:::{confval} BUILDERS
 List of Sphinx builders, i.e., formats, which will be built by [](#build_all) task. E.g., `["html", "dirhtml"]`.
-```
+:::
 
-```{confval} DEFAULT_BUILDER
+:::{confval} DEFAULT_BUILDER
 Default builder for [](#nox-build) and [](#nox-preview) tasks.
-```
+:::
 
-```{confval} LANGUAGES
+:::{confval} LANGUAGES
 List of all supported languages if you want to translate your documentation.By default, `[]` (an empty list). E.g., `['es', 'fr', 'de']`. See [list of Sphinx supported languages](https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-language).
-```
+:::
 
-```{confval} DEFAULT_LANGUAGE
+:::{confval} DEFAULT_LANGUAGE
 Default language for [](#nox-build) and [](#nox-preview) tasks.
-```
+:::
 
 {#nox-tasks}
 
@@ -194,6 +194,6 @@ source
             └── sections.po
 ```
 
-```{seealso}
+:::{seealso}
 Learn more about [PO/POT formats](https://documatt.com/blog/21/gettext-po-format/) and [gettext translation process](https://documatt.com/blog/21/gettext-translation/) at Tech writer at work blog.
-```
+:::

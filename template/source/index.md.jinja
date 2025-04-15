@@ -4,16 +4,16 @@ The following special markup is `toctree` directive that constitute book's docum
 
 However, if you have created some documents, add them to the `toctree` directive bellow.
 
-```{tip}
+:::{tip}
 You can mix Markdown (.md) and reStructuredText (.rst) markup.
-```
+:::
 
-```{toctree}
+:::{toctree}
 :caption: 'Contents:'
 :maxdepth: 2
 
-```
+:::
 
-```{note}
+:::{note}
 Note that documents in `toctree` are listed *without* a file extension.
-```
+:::

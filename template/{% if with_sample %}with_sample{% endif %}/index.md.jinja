@@ -8,19 +8,19 @@ In this minimal book template there are only three other documents
 - {doc}`sections` (file `sections.md`)
 - {doc}`demo` (file `demo.rst`)
 
-```{tip}
+:::{tip}
 You can mix Markdown (.md) and reStructuredText (.rst) markup.
-```
+:::
 
-```{toctree}
+:::{toctree}
 :caption: 'Contents:'
 :maxdepth: 2
 
 sample
 sections
 demo
-```
+:::
 
-```{note}
+:::{note}
 Note that documents in `toctree` and `doc` are listed *without* a file extension.
-```
+:::

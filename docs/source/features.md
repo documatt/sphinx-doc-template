@@ -1,9 +1,9 @@
 # Features
 
-```{include} ../../README.md
+:::{include} ../../README.md
 :start-after: <!-- features -->
 :end-before: <!-- .features -->
-```
+:::
 
 Some of the features are described in more detail below.
 

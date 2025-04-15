@@ -15,9 +15,9 @@ The recommended way to install and run is using the [uv] tool. The uv can even i
 
 1. [**Install uv**](https://docs.astral.sh/uv/getting-started/installation/) for your environment.
 
-   ```{seealso}
+   :::{seealso}
    See [Copier docs][Copier] and [Nox docs][Nox] for other installation options if uv is not suitable for you.
-   ```
+   :::
 
 ## Tutorial
 
