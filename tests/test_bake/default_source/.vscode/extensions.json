@@ -1,0 +1,26 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=827846 to learn about workspace recommendations.
+  // Extension identifier format: ${publisher}.${name}. Example: vscode.csharp
+  // List of extensions which should be recommended for users of this workspace.
+  "recommendations": [
+    // Prettier formatter
+    "esbenp.prettier-vscode",
+
+    // Python ruff formatter and linter
+    "charliermarsh.ruff",
+
+    // Syntax highlighting for Jinja HTML/CSS/JS and other templates
+    "samuelcolvin.jinjahtml",
+
+    // MyST markdown syntax highlighting
+    "executablebookproject.myst-highlight",
+
+    // Simple RST syntax highlighting
+    "trond-snekvik.simple-rst",
+
+    // Gettext syntax highlighting
+    "mrorz.language-gettext"
+  ],
+  // List of extensions recommended by VS Code that should not be recommended for users of this workspace.
+  "unwantedRecommendations": []
+}
