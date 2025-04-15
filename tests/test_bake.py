@@ -102,6 +102,21 @@ def test_no_package_json(workaround_tmp_path: Path):
         "package.json file should not be created"
     )
 
+def test_no_vscode(workaround_tmp_path: Path):
+    # *** Arrange ***
+
+    # *** Act ***
+    call_copier(
+        workaround_tmp_path,
+        defaults=True,
+        data={"vscode": False},
+    )
+
+    # *** Assert ***
+    assert (workaround_tmp_path / ".vscode").exists() is False, (
+        ".vscode directory should not be created"
+    )
+
 
 def test_nox_build_source(workaround_tmp_path: Path):
     """Test if `nox -s build` of source layout does not crash."""

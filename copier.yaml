@@ -82,6 +82,11 @@ with_sample:
   default: false
   help: "Do you want to add sample documents to the project? If you want to create an empty documentation, choose 'no'."
 
+vscode:
+  type: bool
+  default: true
+  help: "Do you want add VS Code support? It will create .vscode/ folder. If you are not sure, use 'yes'."
+
 package_json:
   type: bool
   default: true
