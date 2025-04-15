@@ -91,12 +91,6 @@ myst_enable_extensions = [
     "strikethrough",
 ]
 
-myst_substitutions = {
-    "project": project,
-    "author": author,
-    "version": version,
-}
-
 # Auto-generated heading anchors
 # Allows
 #       See settings's [HOME option](../ref/settings.md#HOME).
@@ -104,6 +98,21 @@ myst_heading_anchors = 6
 
 # Linky only those that begin with a schema (http://, etc.). Now `documatt.com` will not be converted to a link.
 myst_linkify_fuzzy_links = False
+
+
+# -- Substitutions ----------------------------------------------------------
+
+rst_epilog = f"""
+.. |project| replace:: {project}
+.. |author| replace:: {author}
+.. |version| replace:: {version}
+"""
+
+myst_substitutions = {
+    "project": project,
+    "author": author,
+    "version": version,
+}
 
 
 # -- Options for Mermaid ----------------------------------------------------
