@@ -75,10 +75,20 @@ other_builders:
 flat:
   type: bool
   default: false
-  help: "You have two options for placing document sources. Either, you use a flat structure, where all files are in the root, or you under 'source' directory within the root. The flat structure is recommended if you are creating 'docs/` directory in your project. The source structure is recommended if you are creating a separate repository for your documentation. If you are not sure, use the source."
+  help: "Do you want flat structure? You have two options for placing document sources. Either, you use a flat structure, where all files are in the root, or you under 'source' directory within the root. The flat structure is recommended if you are creating 'docs/` directory in your project. The source structure is recommended if you are creating a separate repository for your documentation. If you are not sure, use the source."
   validator: "{% if not flat %}Value cannot be empty{% endif %}"
+
+with_sample:
+  type: bool
+  default: false
+  help: "Do you want to add sample documents to the project? If you want to create an empty documentation, choose 'no'."
+  validator: "{% if not with_sample %}Value cannot be empty{% endif %}"
 
 _tasks:
   # Move everything under source/ to / to create flat structure
   - command: "python3 {{ _copier_conf.src_path }}{{ _copier_conf.sep }}scripts{{ _copier_conf.sep }}flat.py"
     when: "{{ flat }}"
+  
+  # Move samples to source/ (or root if flat), overwrite existing files
+  - command: "python3 {{ _copier_conf.src_path }}{{ _copier_conf.sep }}scripts{{ _copier_conf.sep }}with_sample.py"
+    when: "{{ with_sample }}"

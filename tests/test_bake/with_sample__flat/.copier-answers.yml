@@ -1,0 +1,17 @@
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+_commit: v0.2.0-29-gb488a1b
+_src_path: .
+default_builder: dirhtml
+default_language: en
+flat: true
+html_baseurl: https://documatt.com
+html_theme: alabaster
+license: MIT
+other_builders: []
+other_languages: []
+project_author: John Doe
+project_name: My Documentation
+project_slug: my-documentation
+project_version: 0.1.0
+with_sample: true
+year: 2025

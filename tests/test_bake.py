@@ -89,26 +89,50 @@ def copier_copy(workaround_tmp_path, **kwargs):
     )
 
 
-def test_defaults_source(workaround_tmp_path: Path, datadir: Path):
-    """Test if the source layout works."""
+def test_default__source(workaround_tmp_path: Path, datadir: Path):
+    """Test if defaults with the source layout works."""
     # *** Arrange ***
 
     # *** Act ***
     copier_copy(workaround_tmp_path, defaults=True)
 
     # *** Assert ***
-    deep_compare_dirs(workaround_tmp_path, datadir / "default_source")
+    deep_compare_dirs(workaround_tmp_path, datadir / "default__source")
 
 
-def test_defaults_flat(workaround_tmp_path: Path, datadir: Path):
-    """Test if the flat layout works."""
+def test_default__flat(workaround_tmp_path: Path, datadir: Path):
+    """Test if defaults with the flat layout works."""
     # *** Arrange ***
 
     # *** Act ***
     copier_copy(workaround_tmp_path, defaults=True, data={"flat": True})
 
     # *** Assert ***
-    deep_compare_dirs(workaround_tmp_path, datadir / "default_flat")
+    deep_compare_dirs(workaround_tmp_path, datadir / "default__flat")
+
+
+def test_with_sample__source(workaround_tmp_path: Path, datadir: Path):
+    """Test if the source layout with samples works."""
+    # *** Arrange ***
+
+    # *** Act ***
+    copier_copy(workaround_tmp_path, defaults=True, data={"with_sample": True})
+
+    # *** Assert ***
+    deep_compare_dirs(workaround_tmp_path, datadir / "with_sample__source")
+
+
+def test_with_samples__flat(workaround_tmp_path: Path, datadir: Path):
+    """Test if the flat layout with samples works."""
+    # *** Arrange ***
+
+    # *** Act ***
+    copier_copy(
+        workaround_tmp_path, defaults=True, data={"flat": True, "with_sample": True}
+    )
+
+    # *** Assert ***
+    deep_compare_dirs(workaround_tmp_path, datadir / "with_sample__flat")
 
 
 def test_no_license(workaround_tmp_path: Path):
