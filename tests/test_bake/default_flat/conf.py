@@ -35,6 +35,7 @@ exclude_patterns = [
     # Hide files beginning with a dot
     "[.]*",
     # List remaining to exclude from the build
+    "_build",
     "Thumbs.db",
     ".DS_Store",
 ]
