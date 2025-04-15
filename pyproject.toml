@@ -2,18 +2,10 @@
 name = "sphinx-doc-template"
 version = "0.1.0"
 requires-python = ">=3.11"
-dependencies = [
-    "copier>=9.4.1",
-]
+dependencies = ["copier>=9.4.1"]
 readme = "README.md"
 description = "The Copier template for creating a modern Sphinx documentation project. Write in Markdown or reStructuredText, translate to multiple languages, boost with popular extensions, and enjoy automatic live reload on change."
-keywords = [
-    "copier",
-    "project template",
-    "scaffolding",
-    "skeleton",
-    "sphinx",
-]
+keywords = ["copier", "project template", "scaffolding", "skeleton", "sphinx"]
 license = { file = "LICENSE" }
 classifiers = [
     "Framework :: Sphinx",
