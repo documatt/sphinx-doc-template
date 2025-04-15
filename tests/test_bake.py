@@ -87,6 +87,22 @@ def test_no_license(workaround_tmp_path: Path):
     )
 
 
+def test_no_package_json(workaround_tmp_path: Path):
+    # *** Arrange ***
+
+    # *** Act ***
+    call_copier(
+        workaround_tmp_path,
+        defaults=True,
+        data={"package_json": False},
+    )
+
+    # *** Assert ***
+    assert (workaround_tmp_path / "package.json").exists() is False, (
+        "package.json file should not be created"
+    )
+
+
 def test_nox_build_source(workaround_tmp_path: Path):
     """Test if `nox -s build` of source layout does not crash."""
     # *** Arrange ***
