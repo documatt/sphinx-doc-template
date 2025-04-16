@@ -1,5 +1,3 @@
-from datetime import date
-
 # Configuration file for the Sphinx documentation builder.
 #
 # For the full list of built-in configuration values, see the documentation:
@@ -9,9 +7,9 @@ from datetime import date
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = "Sphinx Documentation Template"
-author = "Documatt.com, s.r.o."
+author = "Documatt.com, s.r.o. and contributors"
 version = "0.1.0"
-copyright = f"{date.today().year}, {author}"
+copyright = f"%Y, {author}"
 
 
 # -- General configuration ---------------------------------------------------
@@ -37,9 +35,13 @@ exclude_patterns = [
     # Hide files beginning with a dot
     "[.]*",
     # List remaining to exclude from the build
+    "_build",
     "Thumbs.db",
     ".DS_Store",
 ]
+
+suppress_warnings = ["myst.strikethrough"]
+
 
 # -- Options for internationalisation ----------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-internationalisation
@@ -63,13 +65,15 @@ if not html_baseurl.endswith("/"):
 
 html_permalinks_icon = "#"
 html_copy_source = False
-html_logo = "../../favicon.svg"
-html_favicon = "../../favicon.svg"
+html_logo = html_favicon = "_static/logo.svg"
 html_static_path = ["_static"]
 html_extra_path = ["robots.txt"]
 
-html_theme = "furo"
-html_theme_options = {}
+html_theme = "sphinx_documattcom_theme"
+html_theme_options = {
+    "hero_title": "Sphinx Doc Template",
+    "hero_subtitle": "<em>A template for creating a modern Sphinx documentations</em>. Write in Markdown or reStructuredText, translate to multiple languages, boost with popular extensions, and enjoy automatic live reload on change.",
+}
 
 templates_path = ["_templates"]
 
@@ -78,7 +82,6 @@ templates_path = ["_templates"]
 # https://myst-parser.readthedocs.io/en/latest/configuration.html
 
 myst_enable_extensions = [
-    "colon_fence",
     "attrs_inline",
     "attrs_block",
     "deflist",
@@ -86,13 +89,9 @@ myst_enable_extensions = [
     "linkify",
     "substitution",
     "html_image",
+    "colon_fence",
+    "strikethrough",
 ]
-
-myst_substitutions = {
-    "project": project,
-    "author": author,
-    "version": version,
-}
 
 # Auto-generated heading anchors
 # Allows
@@ -101,6 +100,21 @@ myst_heading_anchors = 6
 
 # Linky only those that begin with a schema (http://, etc.). Now `documatt.com` will not be converted to a link.
 myst_linkify_fuzzy_links = False
+
+
+# -- Substitutions ----------------------------------------------------------
+
+rst_epilog = f"""
+.. |project| replace:: {project}
+.. |author| replace:: {author}
+.. |version| replace:: {version}
+"""
+
+myst_substitutions = {
+    "project": project,
+    "author": author,
+    "version": version,
+}
 
 
 # -- Options for Mermaid ----------------------------------------------------
@@ -118,7 +132,22 @@ sitemap_locales = [None]
 # Default is {lang}{version}{link}, but version is not used in URLs in this project
 sitemap_url_scheme = "{lang}{link}"
 
+# Exclude these files from the sitemap
+# search and genindex are special pages not generated from content
+# <name>.html is for html builder, <name>/ for dirhtml builder
 sitemap_excludes = [
     "search.html",
+    "search/",
     "genindex.html",
+    "genindex/",
 ]
+
+# -- Options for reredirects ------------------------------------------------
+# Redirect from html to dirhtml
+redirects = {
+    "overview.html": "overview/index.html",
+    "quickstart.html": "quickstart/index.html",
+    "features.html": "features/index.html",
+    "usage.html": "usage/index.html",
+    "contributing.html": "contributing/index.html",
+}

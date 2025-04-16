@@ -1,6 +1,6 @@
 # Features
 
-:::{include} ../../README.md
+:::{include} ../README.md
 :start-after: <!-- features -->
 :end-before: <!-- .features -->
 :::

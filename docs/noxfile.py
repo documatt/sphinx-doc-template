@@ -7,8 +7,8 @@ import nox
 # *** Settings ***
 # *****************************************************************************
 
-INDIR = "source"
-OUTDIR = "build"
+INDIR = "."
+OUTDIR = "_build"
 
 DEFAULT_SPHINX_OPTS = [
     # Speed up the build by using multiple cores
@@ -21,7 +21,7 @@ DEFAULT_SPHINX_OPTS = [
 ]
 SPHINX_AUTOBUILD_OPTS = []
 
-DEFAULT_BUILDER = "html"
+DEFAULT_BUILDER = "dirhtml"
 BUILDERS = [DEFAULT_BUILDER] + []
 
 DEFAULT_LANGUAGE = "en"
@@ -32,6 +32,9 @@ nox.options.reuse_existing_virtualenvs = True
 
 # No default sessions when "nox" is run (explicit is better than implicit)
 nox.options.sessions = []
+
+# Massively speed up the build by using uv
+nox.options.default_venv_backend = "uv"
 
 
 # *****************************************************************************
@@ -79,12 +82,11 @@ def run_sphinx_builder(session, builder, language):
     )
 
 
-def install_dependencies(session, *extra_deps: str):
-    """Install project dependencies (theme and docs dependencies, and a theme itself)."""
-    # Read dependencies from theme
-    deps = nox.project.load_toml("pyproject.toml")["project"]["dependencies"]
-
-    session.install(*deps, *extra_deps)
+def install_dependencies(session):
+    """Install project dependencies (including dev dependencies)."""
+    session.run_install(
+        "uv", "sync", env={"UV_PROJECT_ENVIRONMENT": session.virtualenv.location}
+    )
 
 
 # *****************************************************************************
@@ -130,7 +132,7 @@ def clean(session):
 @nox.session
 def preview(session):
     """Build and serve the docs with automatic reload on change."""
-    install_dependencies(session, "sphinx-autobuild==2024.10.3")
+    install_dependencies(session)
 
     # Build sample and serve
     builder, language = get_builder_language(session)
@@ -151,7 +153,7 @@ def gettext(session):
     if LANGUAGES == [DEFAULT_LANGUAGE]:
         session.error("No additional languages to generate .pot files for.")
 
-    install_dependencies(session, "sphinx-intl==2.2.0")
+    install_dependencies(session)
 
     gettext_outdir = os.path.join(OUTDIR, "gettext")
 

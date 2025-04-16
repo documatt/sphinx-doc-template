@@ -1,14 +1,19 @@
 # Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
-_commit: v0.2.0-7-g2595516
+_commit: v0.2.0-34-g5d51b25
 _src_path: .
-default_builder: html
+default_builder: dirhtml
 default_language: en
+flat: true
 html_baseurl: https://documatt.com/sphinx-doc-template
 html_theme: alabaster
 license: MIT
 other_builders: []
 other_languages: []
-project_author: Documatt.com, s.r.o.
+package_json: false
+project_author: Documatt.com, s.r.o. and contributors
 project_name: Sphinx Documentation Template
-project_slug: docs
+project_slug: sphinx-doc-template
 project_version: 0.1.0
+vscode: false
+with_sample: false
+year: 2025

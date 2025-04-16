@@ -3,12 +3,12 @@
 <div align="center">
 
 <a href="https://documatt.com/sphinx-doc-template">
-    <img src="https://github.com/documatt/sphinx-doc-template/blob/main/hero.png?raw=true" alt="Project hero image">
+    <img src="https://github.com/documatt/sphinx-doc-template/blob/main/docs/_static/hero.svg?raw=true" alt="Project hero image" width="1920" height="1080">
 </a>
 
 <!-- overview -->
 
-<p><strong>An opinionated template for creating a modern Sphinx documentation project. Write in Markdown or reStructuredText, translate to multiple languages, boost with popular extensions, and enjoy automatic live reload on change.</strong></p>
+<p><strong>An opinionated Copier template for creating a modern Sphinx documentation project. Write in Markdown or reStructuredText, translate to multiple languages, boost with popular extensions, and enjoy automatic live reload on change.</strong></p>
 
 <p>Default blank Sphinx documentation project needs a lot of configuration, fine-tuning, trials, and fails before setting up everything for best results. This template results from the best practices and knowledge we gained by providing <a href="https://documatt.com/services">Documatt's technical writing services</a>.</p>
 
