@@ -18,3 +18,16 @@ If the changes to the template are not reflected after coping, add `-r HEAD/--vc
 > the PEP 440 algorithm. If you want to
 > checkout always the latest version, use
 > `--vcs-ref=HEAD`.
+
+## Commiting
+
+Conventional commits with a scope either `template` or `project` to distinguish between changes made to the
+
+- template - this repository itself
+- project - files and folders generated from template
+
+(See https://copier.readthedocs.io/en/stable/#basic-concepts.)
+
+
+
+
