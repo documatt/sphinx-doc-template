@@ -2,36 +2,23 @@
 
 <div align="center">
 
-<a href="https://documatt.com/sphinx-doc-template">
-    <img src="https://github.com/documatt/sphinx-doc-template/blob/main/docs/_static/hero.svg?raw=true" alt="Project hero image" width="1920" height="1080">
-</a>
+![Project hero image](https://github.com/documatt/sphinx-doc-template/blob/main/docs/_static/hero.svg?raw=true)
 
 <!-- overview -->
 
-<p><strong>An opinionated Copier template for creating a modern Sphinx documentation project. Write in Markdown or reStructuredText, translate to multiple languages, boost with popular extensions, and enjoy automatic live reload on change.</strong></p>
+**An opinionated Copier template for creating a modern Sphinx documentation project. Write in Markdown or reStructuredText, translate to multiple languages, boost with popular extensions, and enjoy automatic live reload on change.**
 
-<p>Default blank Sphinx documentation project needs a lot of configuration, fine-tuning, trials, and fails before setting up everything for best results. This template results from the best practices and knowledge we gained by providing <a href="https://documatt.com/services">Documatt's technical writing services</a>.</p>
+Default blank Sphinx documentation projects require extensive configuration, fine-tuning, and trial and error to achieve optimal results. This template embodies the best practices and expertise gained through [Documatt's technical writing services](https://documatt.com/services).
 
 <!-- .overview -->
 
-<p>
-    <a href="https://documatt.com/sphinx-doc-template">📚Documentation</a> ·
-    <a href="https://github.com/documatt/sphinx-doc-template">📟 Source code</a>
-</p>
+[📚 Documentation](https://documatt.com/sphinx-doc-template) · [📟 Source code](https://github.com/documatt/sphinx-doc-template)
 
-<p>
-    <a href="https://github.com/copier-org/copier"><img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/copier-org/copier/master/img/badge/badge-grayscale-inverted-border-orange.json&labelColor=097cba&color=163B36" alt="Made with Copier badge"/></a>
-    <a href="https://github.com/documatt/sphinx-doc-template">
-        <img src="https://img.shields.io/github/stars/documatt/sphinx-doc-template?style=flat&logo=github&labelColor=097cba&color=163B36" alt="GitHub Repo stars badge">
-    </a>
-    <a href="https://github.com/documatt/sphinx-doc-template/actions/workflows/test.yaml">
-        <img src="https://github.com/documatt/sphinx-doc-template/actions/workflows/test.yaml/badge.svg" alt="GitHub tests badge">
-    </a>
-    <img src="https://img.shields.io/badge/codestyle-Prettier-blue?labelColor=097cba&color=163B36" alt="Code style Prettier badge">
-    <a href="https://raw.githubusercontent.com/documatt/sphinx-doc-template/refs/heads/main/LICENSE">
-        <img src="https://img.shields.io/badge/license-MIT-blue?labelColor=097cba&color=163B36" alt="MIT licence badge">
-    </a>
-</p>
+[![Made with Copier badge](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/copier-org/copier/master/img/badge/badge-grayscale-inverted-border-orange.json&labelColor=097cba&color=163B36)](https://github.com/copier-org/copier)
+[![GitHub Repo stars badge](https://img.shields.io/github/stars/documatt/sphinx-doc-template?style=flat&logo=github&labelColor=097cba&color=163B36)](https://github.com/documatt/sphinx-doc-template)
+[![GitHub tests badge](https://github.com/documatt/sphinx-doc-template/actions/workflows/test.yaml/badge.svg)](https://github.com/documatt/sphinx-doc-template/actions/workflows/test.yaml)
+![Code style Prettier badge](https://img.shields.io/badge/codestyle-Prettier-blue?labelColor=097cba&color=163B36)
+[![MIT licence badge](https://img.shields.io/badge/license-MIT-blue?labelColor=097cba&color=163B36)](https://raw.githubusercontent.com/documatt/sphinx-doc-template/refs/heads/main/LICENSE)
 
 </div>
 
