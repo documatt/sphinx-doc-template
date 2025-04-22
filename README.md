@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![Project hero image](https://github.com/documatt/sphinx-doc-template/blob/main/docs/_static/hero.svg?raw=true)
+![Project hero image](https://github.com/documatt/sphinx-doc-template/blob/main/docs/_static/images/hero.svg?raw=true)
 
 <!-- overview -->
 

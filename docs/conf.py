@@ -65,7 +65,7 @@ if not html_baseurl.endswith("/"):
 
 html_permalinks_icon = "#"
 html_copy_source = False
-html_logo = html_favicon = "_static/logo.svg"
+html_logo = html_favicon = "_static/images/logo.svg"
 html_static_path = ["_static"]
 html_extra_path = ["robots.txt"]
 
