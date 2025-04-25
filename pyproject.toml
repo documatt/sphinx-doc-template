@@ -22,6 +22,7 @@ classifiers = [
 [dependency-groups]
 dev = [
     "deep-dircmp>=0.2.0",
+    "git-cliff>=2.8.0",
     "nox>=2024.10.9",
     "pytest>=8.3.4",
     "pytest-datadir>=1.5.0",
