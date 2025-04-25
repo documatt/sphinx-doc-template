@@ -45,7 +45,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fix typo in `noxfile.py`
 - "No other languages" error to gettext Nox task
 
-## [0.2.0] - 2025-02-O3
+## [0.2.0] - 2025-02-03
 
 - feat: add sphinx-copybutton extension
 - docs: improve docs
