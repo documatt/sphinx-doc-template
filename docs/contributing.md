@@ -19,7 +19,7 @@ If the changes to the template are not reflected after coping, add `-r HEAD/--vc
 > checkout always the latest version, use
 > `--vcs-ref=HEAD`.
 
-## Commiting
+## Committing
 
 Using conventional commits.
 
