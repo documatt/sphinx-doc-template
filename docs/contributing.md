@@ -21,13 +21,24 @@ If the changes to the template are not reflected after coping, add `-r HEAD/--vc
 
 ## Commiting
 
-Conventional commits with a scope either `template` or `project` to distinguish between changes made to the
+Using conventional commits.
 
-- template - this repository itself
-- project - files and folders generated from template
+Most commits should have a scope either `template` (this repository itself) or `project` (files and folders generated from this template). (See [Copier basic concepts](https://copier.readthedocs.io/en/stable/#basic-concepts).)
 
-(See https://copier.readthedocs.io/en/stable/#basic-concepts.)
+For example:
 
+- `chore(template): add git-cliff to dev dependencies` is change of this template repository
+- `chore(project): update sphinx-reredirect 0.1.6` is change to projects generated from this template
+- `docs: update CHANGELOG.md` has no scope because docs are just docs.
 
+## Releasing
 
-
+1. Create branch `release/vX.Y.Z`.
+1. Work on changes.
+1. Update changelog. Manually or with git-cliff tool (e.g., `git-cliff --prepend CHANGELOG.md --bump --unreleased`)
+1. Fine tune `CHANGELOG.md`. Reorder, fix typos, reword, etc.
+1. git-cliff also calculate new version number based on Git history. Remember it.
+1. Increase version in `pyproject.toml`.
+1. Create "release commit" containing changes to `pyproject.toml` with message `chore: release vX.Y.Z`. Release commit may contain other changes too, like to `CHANGELOG.md` and so on.
+1. Create PR for branch. Review and merge to main branch.
+1. Create tag `vX.Y.Z` on release commit.
