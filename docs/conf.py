@@ -25,6 +25,7 @@ extensions = [
     "sphinx_reredirects",
     "sphinx_sitemap",
     "sphinx_copybutton",
+    "sphinxext.opengraph",
 ]
 
 nitpicky = True
@@ -151,3 +152,9 @@ redirects = {
     "usage.html": "usage/index.html",
     "contributing.html": "contributing/index.html",
 }
+
+
+# --- OpenGraph options ---------------------------------------------------
+
+ogp_site_url = html_baseurl
+ogp_image = "_static/images/ogp_image.png"
